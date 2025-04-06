@@ -5,7 +5,7 @@
 **BoomCart** is a stylish, fully functional eCommerce web app built using HTML, CSS, and JavaScript. It features a dark-themed design, interactive UI, seamless shopping flow, and a secure admin panel.
 
 ## 🌐 Live Website
-[Click here to visit BoomCart](https://your-username.github.io/your-repo-name)
+[Click here to visit BoomCart](https://chaitanya1436.github.io/BoomCart/index.)
 
 ---
 
