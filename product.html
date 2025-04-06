@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - BoomCart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="music-player">
+        <audio id="background-music" loop></audio>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="orange-text">Boom</span>Cart</h1>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html?category=men">Men</a></li>
+                    <li><a href="category.html?category=women">Women</a></li>
+                    <li><a href="category.html?category=kids">Kids</a></li>
+                    <li><a href="category.html?category=beauty">Beauty</a></li>
+                    <li><a href="category.html?category=kitchen">Kitchen</a></li>
+                    <li><a href="category.html?category=toys">Toys</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="auth-buttons">
+                    <button id="login-btn" class="btn">Login</button>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > <a id="category-link" href="#">Category</a> > <span id="product-breadcrumb">Product</span>
+        </div>
+        
+        <section class="product-detail">
+            <div class="product-detail-container" id="product-detail-container">
+                <!-- Product details will be loaded with JavaScript -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading product...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <div class="section-header">
+                <h2>Related Products</h2>
+            </div>
+            <div class="product-grid" id="related-products">
+                <!-- Related products will be loaded with JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BoomCart</h3>
+                    <p>Your one-stop destination for premium shopping in India.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="category.html?category=men">Men</a></li>
+                        <li><a href="category.html?category=women">Women</a></li>
+                        <li><a href="category.html?category=kids">Kids</a></li>
+                        <li><a href="category.html?category=beauty">Beauty</a></li>
+                        <li><a href="category.html?category=kitchen">Kitchen</a></li>
+                        <li><a href="category.html?category=toys">Toys</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@boomcart.com</p>
+                    <p>Phone: +91 8919255311</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoomCart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="tabs">
+                <div class="tab-header">
+                    <div class="active" id="login-tab">Login</div>
+                    <div id="register-tab">Register</div>
+                </div>
+                <div class="tab-content">
+                    <div id="login-panel">
+                        <h2>Login</h2>
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="login-username">Username</label>
+                                <input type="text" id="login-username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" id="login-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <div id="login-message" class="mt-3 text-center hidden"></div>
+                        </form>
+                    </div>
+                    <div id="register-panel" class="hidden">
+                        <h2>Register</h2>
+                        <form id="register-form">
+                            <div class="form-group">
+                                <label for="register-username">Username</label>
+                                <input type="text" id="register-username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-email">Email</label>
+                                <input type="email" id="register-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Password</label>
+                                <input type="password" id="register-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                            <div id="register-message" class="mt-3 text-center hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here via JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkout-btn">Checkout</button>
+            <button class="btn btn-secondary clear-cart-btn" id="clear-cart-btn">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <div class="checkout-content">
+                <div class="customer-info">
+                    <h3>Customer Information</h3>
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="fullname">Full Name *</label>
+                            <input type="text" id="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number *</label>
+                            <input type="text" id="mobile" pattern="[0-9]{10}" required>
+                            <small>10-digit mobile number</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                    </form>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items">
+                        <!-- Order items will be added here via JavaScript -->
+                    </div>
+                    <div class="checkout-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">₹0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping:</span>
+                            <span id="checkout-shipping">₹0.00</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total:</span>
+                            <span id="checkout-total">₹0.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="data.js"></script>
+    <script src="users.js"></script>
+    <script src="orders.js"></script>
+    <script src="scripts.js"></script>
+    <script src="product.js"></script>
+    <script src="music.js"></script>
+</body>
+</html>

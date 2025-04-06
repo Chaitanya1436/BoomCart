@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - BoomCart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme admin-page">
+    <div class="music-player">
+        <audio id="background-music" loop></audio>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="orange-text">Boom</span>Cart</h1>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admin.html" class="active">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="user-info">
+                    <span>Admin</span>
+                    <button id="logout-btn" class="btn btn-small">Logout</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container admin-container">
+        <div class="admin-header">
+            <h1>Admin Dashboard</h1>
+            <p>Manage orders and customer requests</p>
+        </div>
+        
+        <div class="admin-stats">
+            <div class="stat-card">
+                <div class="stat-icon pending">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Pending Orders</h3>
+                    <div class="stat-value" id="pending-count">0</div>
+                    <p>Orders waiting for approval</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon approved">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Approved Orders</h3>
+                    <div class="stat-value" id="approved-count">0</div>
+                    <p>Orders ready for processing</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon rejected">
+                    <i class="fas fa-times-circle"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>Rejected Orders</h3>
+                    <div class="stat-value" id="rejected-count">0</div>
+                    <p>Orders that were rejected</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="admin-orders">
+            <div class="order-tabs">
+                <button class="tab-btn active" data-filter="all">All Orders</button>
+                <button class="tab-btn" data-filter="pending">Pending</button>
+                <button class="tab-btn" data-filter="approved">Approved</button>
+                <button class="tab-btn" data-filter="rejected">Rejected</button>
+            </div>
+            
+            <div class="order-table-container">
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-table-body">
+                        <!-- Orders will be added via JavaScript -->
+                    </tbody>
+                </table>
+                <div id="no-orders" class="no-orders hidden">No orders found</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BoomCart</h3>
+                    <p>Your one-stop destination for premium shopping in India.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Admin Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="admin.html">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: chaitanyanagasai143@gmail.com</p>
+                    <p>Phone: +91 8919255311</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoomCart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="admin-login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="data.js"></script>
+    <script src="users.js"></script>
+    <script src="orders.js"></script>
+    <script src="scripts.js"></script>
+    <script src="admin.js"></script>
+    <script src="music.js"></script>
+</body>
+</html>

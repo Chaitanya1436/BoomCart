@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoomCart - Indian E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="music-player">
+        <audio id="background-music" loop></audio>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span class="orange-text">Boom</span>Cart</h1>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#men">Men</a></li>
+                    <li><a href="#women">Women</a></li>
+                    <li><a href="#kids">Kids</a></li>
+                    <li><a href="#beauty">Beauty</a></li>
+                    <li><a href="#kitchen">Kitchen</a></li>
+                    <li><a href="#toys">Toys</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="auth-buttons">
+                    <button id="login-btn" class="btn">Login</button>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="dp/Intro/3.jpg" alt="Shopping">
+                <div class="carousel-content">
+                    <h2>Mega Sale</h2>
+                    <p>Up to 70% off on premium brands...</p>
+                    <button class="btn btn-primary">Shop Now</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="dp/Intro/4.jpg" alt="Shopping">
+                <div class="carousel-content">
+                    <h2>New Arrivals</h2>
+                    <p>Workwear that means business...</p>
+                    <button class="btn btn-primary">Explore</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="dp/Intro/1.jpg" alt="Shopping">
+                <div class="carousel-content">
+                    <h2>Weekend Collection</h2>
+                    <p>Weekend fits that hit different...</p>
+                    <button class="btn btn-primary">Discover</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="dp/Intro/2.jpg" alt="Shopping">
+                <div class="carousel-content">
+                    <h2>Comfort First</h2>
+                    <p>Comfort meets street style...</p>
+                    <button class="btn btn-primary">Dive In</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="dp/Intro/5.jpg" alt="Shopping">
+                <div class="carousel-content">
+                    <h2>Season Sales</h2>
+                    <p>New styles that speak your vibe....</p>
+                    <button class="btn btn-primary">Explore</button>
+                </div>
+            </div>
+            
+        </div>
+        <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <main class="container">
+        <!-- Men's Section -->
+        <section class="category-section" id="men">
+            <div class="section-header">
+                <h2>Men's Fashion</h2>
+                <a href="category.html?category=men" class="view-all">View All</a>
+            </div>
+            <div class="product-grid" id="men-products">
+                <!-- Products will be added via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Women's Section -->
+        <section class="category-section" id="women">
+            <div class="section-header">
+                <h2>Women's Fashion</h2>
+                <a href="category.html?category=women" class="view-all">View All</a>
+            </div>
+            <div class="product-grid" id="women-products">
+                <!-- Products will be added via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Kids Section -->
+        <section class="category-section" id="kids">
+            <div class="section-header">
+                <h2>Kids' Fashion</h2>
+                <a href="category.html?category=kids" class="view-all">View All</a>
+            </div>
+            <div class="product-grid" id="kids-products">
+                <!-- Products will be added via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Beauty Section -->
+        <section class="category-section" id="beauty">
+            <div class="section-header">
+                <h2>Beauty Products</h2>
+                <a href="category.html?category=beauty" class="view-all">View All</a>
+            </div>
+            <div class="product-grid" id="beauty-products">
+                <!-- Products will be added via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Kitchen Section -->
+        <section class="category-section" id="kitchen">
+            <div class="section-header">
+                <h2>Kitchen Items</h2>
+                <a href="category.html?category=kitchen" class="view-all">View All</a>
+            </div>
+            <div class="product-grid" id="kitchen-products">
+                <!-- Products will be added via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Toys Section -->
+        <section class="category-section" id="toys">
+            <div class="section-header">
+                <h2>Toys</h2>
+                <a href="category.html?category=toys" class="view-all">View All</a>
+            </div>
+            <div class="product-grid" id="toys-products">
+                <!-- Products will be added via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Sponsorship Section -->
+        <section class="sponsorship-section">
+            <div class="sponsorship-header">
+                <h2>Our Sponsors</h2>
+                <p>Premium brands that partner with us</p>
+            </div>
+            <div class="sponsor-grid">
+                <div class="sponsor-card locked">
+                    <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="sponsor-card locked">
+                    <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    <p>Coming Soon</p>
+                </div>
+                <div class="sponsor-card locked">
+                    <div class="lock-icon"><i class="fas fa-lock"></i></div>
+                    <p>Coming Soon</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BoomCart</h3>
+                    <p>Your one-stop destination for premium shopping in India.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#men">Men</a></li>
+                        <li><a href="#women">Women</a></li>
+                        <li><a href="#kids">Kids</a></li>
+                        <li><a href="#beauty">Beauty</a></li>
+                        <li><a href="#kitchen">Kitchen</a></li>
+                        <li><a href="#toys">Toys</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: chaitanyanagasai143@gmail.com</p>
+                    <p>Phone: +91 8919255311</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BoomCart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="tabs">
+                <div class="tab-header">
+                    <div class="active" id="login-tab">Login</div>
+                    <div id="register-tab">Register</div>
+                </div>
+                <div class="tab-content">
+                    <div id="login-panel">
+                        <h2>Login</h2>
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="login-username">Username</label>
+                                <input type="text" id="login-username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" id="login-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                            <div id="login-message" class="mt-3 text-center hidden"></div>
+                        </form>
+                    </div>
+                    <div id="register-panel" class="hidden">
+                        <h2>Register</h2>
+                        <form id="register-form">
+                            <div class="form-group">
+                                <label for="register-username">Username</label>
+                                <input type="text" id="register-username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-email">Email</label>
+                                <input type="email" id="register-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Password</label>
+                                <input type="password" id="register-password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                            <div id="register-message" class="mt-3 text-center hidden"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here via JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkout-btn">Checkout</button>
+            <button class="btn btn-secondary clear-cart-btn" id="clear-cart-btn">Clear Cart</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Checkout</h2>
+            <div class="checkout-content">
+                <div class="customer-info">
+                    <h3>Customer Information</h3>
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="fullname">Full Name *</label>
+                            <input type="text" id="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number *</label>
+                            <input type="text" id="mobile" pattern="[0-9]{10}" required>
+                            <small>10-digit mobile number</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="payment-info">
+                    <h3>Payment Details</h3>
+                    <div class="upi-details">
+                        <p><strong>UPI ID:</strong> 8919255311@ibl</p>
+                        <p>Scan the QR code or use your UPI app to pay</p>
+                        <p>After payment, enter the transaction ID below to complete your order.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="transaction-id">UPI Transaction ID *</label>
+                        <input type="text" id="transaction-id" required>
+                        <small>Enter the transaction ID from your UPI payment</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-screenshot">Payment Screenshot (Optional)</label>
+                        <input type="file" id="payment-screenshot" accept="image/*">
+                        <small>Upload a screenshot of your payment confirmation</small>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkout-items">
+                        <!-- Checkout items will be added here via JavaScript -->
+                    </div>
+                    <div class="summary-total">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">₹0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping:</span>
+                            <span id="checkout-shipping">₹0.00</span>
+                        </div>
+                        <div class="total-row total">
+                            <span>Total:</span>
+                            <span id="checkout-total">₹0.00</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary place-order-btn" id="place-order-btn">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal" id="order-confirmation-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="confirmation-content">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Your order has been received and is being processed.</p>
+                <div class="order-details">
+                    <p><strong>Order ID:</strong> <span id="confirmation-order-id"></span></p>
+                    <p><strong>Amount:</strong> <span id="confirmation-amount"></span></p>
+                    <p><strong>Delivery Address:</strong> <span id="confirmation-address"></span></p>
+                </div>
+                <p class="confirmation-message">You will receive a confirmation on your mobile number shortly.</p>
+                <button class="btn btn-primary" id="continue-shopping-btn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toast-notification">
+        <div class="toast-content"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="users.js"></script>
+    <script src="orders.js"></script>
+    <script src="scripts.js"></script>
+    <script src="music.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
