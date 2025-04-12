@@ -264,7 +264,7 @@ const products = [
       name: 'Face Cream',
       description: 'Whitening face Cream for all skin types.',
       price: 139, // in paise (₹1399.00)
-      image: 'dp/Beauty/face cream haa.jpg'
+      image: 'dp/Beauty/face_ cream haa.jpg'
     },
     {
       id: 33,
