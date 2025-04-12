@@ -259,14 +259,6 @@ const products = [
       image: 'dp/Beauty/lipstick.avif'
     },
     {
-      id: 32,
-      category: 'beauty',
-      name: 'Face Cream',
-      description: 'Whitening face Cream for all skin types.',
-      price: 139, // in paise (₹1399.00)
-      image: 'dp/Beauty/face_ cream haa.jpg'
-    },
-    {
       id: 33,
       category: 'beauty',
       name: 'Perfume',
