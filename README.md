@@ -6,10 +6,8 @@
 
 ## 🌐 Live Website
 [Click here to visit BoomCart](https://chaitanya1436.github.io/BoomCart/index.html)
-<p>
-  <img src="BoomCart_gif.gif" alt="Prediction Graph" width="45%" />
-</p>
 
+![After Training](BoomCart_gif.gif)
 
 ---
 
